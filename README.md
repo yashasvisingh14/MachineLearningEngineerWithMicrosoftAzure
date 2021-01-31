@@ -1,1 +1,1 @@
-# MachineLearningEngineerWithMircosoftAzure
+# MachineLearningEngineerWithMicrosoftAzure
