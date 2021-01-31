@@ -6,7 +6,9 @@ In this project, we build and optimize an Azure ML pipeline using the Python SDK
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+The dataset contains data of various clients of a bank involved in marketing data. Our aim is to predict if the client will subscribe to a fixed term deposit or not denoted with feature y in the dataset. 
+Dataset - https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv
+
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
 
