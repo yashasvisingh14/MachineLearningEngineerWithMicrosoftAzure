@@ -48,21 +48,21 @@ automl_config = AutoMLConfig(
 ## Pipeline comparison
 In HyperDrive, we control the model training process by adjusting parameters and finding the configuration of hyperparameters results in the best performance. It uses a fixed machine learning algorithm that is provided. Whereas,AutoML creates a number of pipelines in parallel that try different algorithms and parameters for us. It gives us the best model which "fits" our data. It trains and tunes the model using the target metric specified.
 HyperDrive is typically computationally expensive. On the other hand, AutoML implements ML solutions without extensive programming knowledge. It saves time and resources. \
-    AutoML Architecture
-1. Identify the ML problem
-2. Choose whether you want to use the Python SDK or the studio web experience
-3. Specify the source and format of the labeled training data
-4. Configure the compute target for model training
-5. Configure the automated machine learning parameters 
-6. Submit the training run \
+AutoML Architecture
+* Identify the ML problem
+* Choose whether you want to use the Python SDK or the studio web experience
+* Specify the source and format of the labeled training data
+* Configure the compute target for model training
+* Configure the automated machine learning parameters 
+* Submit the training run \
 HyperDrive Architecture
-1. Define the parameter search space
-2. Specify a primary metric to optimize
-3. Specify early termination policy for low-performing runs
-4. Allocate resources
-5. Launch an experiment with the defined configuration
-6. Visualize the training runs
-7. Select the best configuration for your model \
+* Define the parameter search space
+* Specify a primary metric to optimize
+* Specify early termination policy for low-performing runs
+* Allocate resources
+* Launch an experiment with the defined configuration
+* Visualize the training runs
+* Select the best configuration for your model \
 **Accuracy HyperDrive = 0.9107**\
 **Accuracy AutoML = 0.9168 (Voting Ensemble Model)**\
 Hence, AutoML performed well with our data than HyperDrive run.
