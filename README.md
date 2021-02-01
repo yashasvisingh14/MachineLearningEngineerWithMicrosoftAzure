@@ -37,7 +37,11 @@ automl_config = AutoMLConfig(
     label_column_name='y',
     enable_onnx_compatible_models=True,
     n_cross_validations=2)
-* Classification experiment using accuracy as the primary metric with experiment timeout minutes set to 30 minutes and 2 cross-validation folds.       
+* Task helps us determine the kind of machine learning problem we need to solve. It can be classification, regression, and forecasting.   
+* The primary metric parameter determines the metric to be used during model training for optimization. In this case where classification scenario is used we provided accuracy as primary metric.
+* experiment_timeout_minutes defines how long, in minutes, the experiment should continue to run, in our case its 30 minutes.
+* n_cross_validations parameter sets number of cross validations to perform, based on the same number of folds.
+* (ONNX) can help optimize the inference of the machine learning model.        
 * Retrieved and saved the best automl model.
 * Accuracy achieved = 0.9168
 
@@ -45,9 +49,25 @@ automl_config = AutoMLConfig(
 In HyperDrive, we control the model training process by adjusting parameters and finding the configuration of hyperparameters results in the best performance. It uses a fixed machine learning algorithm that is provided. Whereas,AutoML creates a number of pipelines in parallel that try different algorithms and parameters for us. It gives us the best model which "fits" our data. It trains and tunes the model using the target metric specified.\  
 HyperDrive is typically computationally expensive. On the other hand, AutoML implements ML solutions without extensive programming knowledge. It saves time and resources.\
 Due to above reasons, There was a difference in accuracy achieved by both the processes.\
+AutoML Architecture\
+1. Identify the ML problem
+2. Choose whether you want to use the Python SDK or the studio web experience
+3. Specify the source and format of the labeled training data
+4. Configure the compute target for model training
+5. Configure the automated machine learning parameters 
+6. Submit the training run\
+HyperDrive Architecture\
+1. Define the parameter search space
+2. Specify a primary metric to optimize
+3. Specify early termination policy for low-performing runs
+4. Allocate resources
+5. Launch an experiment with the defined configuration
+6. Visualize the training runs
+7. Select the best configuration for your model\
 **Accuracy HyperDrive = 0.9107**\
 **Accuracy AutoML = 0.9168 (Voting Ensemble Model)**\
 Hence, AutoML performed well with our data than HyperDrive run.
+
 
 ## Future work
 In this project, certain parameters and metrics are used but to gain an improved accuracy we can experiment with them. For classfication experiment we used accuracy as our primary metric which can be replaced with average_precision_score_weighted, norm_macro_recall, precision_score_weighted and AUC_weighted according to the scenarios. With regression or forecast models we can have different experiment timeout minutes sets and cross validation folds. In HyperDrive, we can run model with different parameter sampling methods like Grid sampling, Bayesian sampling according to hyperparameters. We can also explore early termination policy which automatically terminate poorly performing runs. Early termination improves computational efficiency.
