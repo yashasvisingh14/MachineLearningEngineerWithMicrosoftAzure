@@ -54,7 +54,7 @@ AutoML Architecture
 3. Specify the source and format of the labeled training data
 4. Configure the compute target for model training
 5. Configure the automated machine learning parameters 
-6. Submit the training run
+6. Submit the training run \
 HyperDrive Architecture
 1. Define the parameter search space
 2. Specify a primary metric to optimize
