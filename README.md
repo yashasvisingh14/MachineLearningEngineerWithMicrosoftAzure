@@ -12,7 +12,10 @@ The model which performed well on the given dataset was AutoML with 0.9168 accur
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
-Firstly, the dataset in csv format was imported through given URL. Then libraries were imported  
+**Setting Up Training Script**
+Firstly, The libraries were imported then dataset in csv format was imported through specified URL using TabularDatasetFactory. Then running training script where clean_data function is used for cleaning and one hot encode the data. With train_test_split function, the data is splitted into training and testing with test size 0f 0.3. 
+**HyperDrive Pipeline**
+
 
 **What are the benefits of the parameter sampler you chose?**
 
