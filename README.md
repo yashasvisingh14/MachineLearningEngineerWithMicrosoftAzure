@@ -6,8 +6,8 @@ In this project, we build and optimize an Azure ML pipeline using the Python SDK
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-The dataset contains data of various clients of a bank involved in marketing data. Our aim is to predict if the client will subscribe to a fixed term deposit or not denoted with feature y in the dataset. 
-Dataset - https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv
+The dataset contains data of various clients of a bank involved in marketing data. Our aim is to predict if the client will subscribe to a fixed term deposit or not denoted with feature y in the dataset.\ 
+Dataset - https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv \
 The model which performed well on the given dataset was AutoML with 0.9168 accuracy than Hyperdrive model with accuracy 0.9107.
 
 ## Scikit-learn Pipeline
@@ -45,7 +45,7 @@ automl_config = AutoMLConfig(
 In HyperDrive, we control the model training process by adjusting parameters and finding the configuration of hyperparameters results in the best performance. It uses a fixed machine learning algorithm that is provided. Whereas,AutoML creates a number of pipelines in parallel that try different algorithms and parameters for us. It gives us the best model which "fits" our data. It trains and tunes the model using the target metric specified.\  
 HyperDrive is typically computationally expensive. On the other hand, AutoML implements ML solutions without extensive programming knowledge. It saves time and resources.\
 Due to above reasons, There was a difference in accuracy achieved by both the processes.\
-**Accuracy HyperDrive = 0.9107**
+**Accuracy HyperDrive = 0.9107**\
 **Accuracy AutoML = 0.9168 (Voting Ensemble Model)**\
 Hence, AutoML performed well with our data than HyperDrive run.
 
