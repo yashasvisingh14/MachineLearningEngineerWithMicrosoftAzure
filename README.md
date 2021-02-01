@@ -48,7 +48,7 @@ automl_config = AutoMLConfig(
 ## Pipeline comparison
 In HyperDrive, we control the model training process by adjusting parameters and finding the configuration of hyperparameters results in the best performance. It uses a fixed machine learning algorithm that is provided. Whereas,AutoML creates a number of pipelines in parallel that try different algorithms and parameters for us. It gives us the best model which "fits" our data. It trains and tunes the model using the target metric specified.
 HyperDrive is typically computationally expensive. On the other hand, AutoML implements ML solutions without extensive programming knowledge. It saves time and resources. \
-&nbsp;&nbsp;AutoML Architecture
+&nbsp;&nbsp;&nbsp;&nbsp;AutoML Architecture
 * Identify the ML problem
 * Choose whether you want to use the Python SDK or the studio web experience
 * Specify the source and format of the labeled training data
