@@ -53,4 +53,4 @@ Hence, AutoML performed well with our data than HyperDrive run.
 In this project, certain parameters and metrics are used but to gain an improved accuracy we can experiment with them. For classfication experiment we used accuracy as our primary metric which can be replaced with average_precision_score_weighted, norm_macro_recall, precision_score_weighted and AUC_weighted according to the scenarios. With regression or forecast models we can have different experiment timeout minutes sets and cross validation folds. In HyperDrive, we can run model with different parameter sampling methods like Grid sampling, Bayesian sampling according to hyperparameters. We can also explore early termination policy which automatically terminate poorly performing runs. Early termination improves computational efficiency.
 
 ## Proof of cluster clean up
-
+![Screenshot](https://user-images.githubusercontent.com/64837491/106479600-83ac1480-64d0-11eb-9dfa-38fe158b0d6a.png)
