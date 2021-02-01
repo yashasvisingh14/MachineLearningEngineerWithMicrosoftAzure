@@ -26,8 +26,17 @@ est = SKLearn(source_directory = "./",
 hyperdrive_config = HyperDriveConfig(estimator=est, hyperparameter_sampling=ps, policy=policy, primary_metric_name='Accuracy', primary_metric_goal=PrimaryMetricGoal.MAXIMIZE,   max_total_runs=20, max_concurrent_runs=4)
             
 ## AutoML
-*  Imported data from the provided URL again using TabularDatasetFactory then after cleaning the data it passed to an AutoMLConfig.
-*
+*  Imported data from the provided URL again using TabularDatasetFactory then after cleaning the data it passed to an AutoMLConfig.\
+automl_config = AutoMLConfig(
+    compute_target=cpu_cluster,
+    experiment_timeout_minutes=30,
+    task='classification',
+    primary_metric='accuracy',
+    training_data=ds,
+    label_column_name='y',
+    enable_onnx_compatible_models=True,
+    n_cross_validations=2)
+* 
 
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
