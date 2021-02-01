@@ -11,9 +11,9 @@ Dataset - https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-n
 The model which performed well on the given dataset was AutoML with 0.9168 accuracy than Hyperdrive model with accuracy 0.9107.
 
 ## Scikit-learn Pipeline
-## Setting Up Training Script
+### Setting Up Training Script
 Firstly, The libraries were imported then dataset in csv format was imported through specified URL using TabularDatasetFactory. Then running training script where clean_data function is used for cleaning and one hot encode the data. With train_test_split function, the data is splitted into training and testing with test size 0f 0.3. 
-## HyperDrive Pipeline
+### HyperDrive Pipeline
 * Created compute cluster using vm_size of "Standard_D2_V2" in provisioning configuration and max_nodes of 4.
 * Specified a parameter sampler i.e RandomParameterSampling, since randomly selects both discrete and continuous hyperparameter values. The benefit of using Random Sampling is that it supports early termination of low peformance runs. 
 * Specified a policy early stopping policy i.e Bandit Policy, it helps to automatically terminate poorly performing runs based on slack factor.It improves computational    efficiency. The benefit is that policy early terminates any runs where the primary metric is not within the specified slack factor with respect to best performing training run.
