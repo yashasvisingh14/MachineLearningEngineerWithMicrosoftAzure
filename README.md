@@ -55,6 +55,7 @@ HyperDrive is typically computationally expensive. On the other hand, AutoML imp
 * Configure the compute target for model training
 * Configure the automated machine learning parameters 
 * Submit the training run\
+![automl-concept-diagram2](https://user-images.githubusercontent.com/64837491/106501593-5b7cdf80-64e9-11eb-8ed0-636e4ccdb42b.png)
 **HyperDrive Architecture**
 * Define the parameter search space
 * Specify a primary metric to optimize
